@@ -215,44 +215,60 @@ For more information, please refer to <https://unlicense.org>`;
         };
 
         fs.writeFile("README.md",
-`#${response.title}
+`# ${response.title}
 
-##Description
+## Description
 
-    ${response.description}
+  ${response.description}
+
+<br/>
 
 ${licenseBadge}
 
-##Table of Contents
+---
 
-1. [Installation](#Installation)
-2. [Usage](#Usage)
-3. [Contributing](#Contributing)
-4. [Tests](#Tests)
-5. [License](#License)
-6. [Questions](#Questions)
+## Table of Contents
 
-##Installation
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Contributing](#contributing)
+4. [Tests](#tests)
+5. [License](#license)
+6. [Questions](#questions)
+
+---
+
+## Installation
 
 ${response.installation}
 
-##Usage
+---
+
+## Usage
 
 ${response.usage}
 
-##Contributing
+---
+
+## Contributing
 
 ${response.contribution}
 
-##Tests
+---
+
+## Tests
 
 ${response.tests}
 
-##License
+---
+
+## License
 
 ${licenseNotice}
 
-##Questions
+---
+
+## Questions
 
 If you have questions, contact me on [GitHub](https://github.com/${response.github}) or send me an e-mail at <${response.email}>.`,
             (err) => err ? console.log(err) : console.log("- README.md created in the root directory -")
