@@ -1,0 +1,14 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christian Sadler",
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
