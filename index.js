@@ -68,7 +68,7 @@ inquirer
 
             licenseBadge = "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
             licenseNotice =
-`Copyright (C) ${currentYear}  ${fullName}
+`Copyright &copy; ${currentYear}  ${fullName}
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
@@ -91,7 +91,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.`;
                 licenseBadge = "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
             }
             licenseNotice =
-`Copyright (C) ${currentYear}  ${fullName}
+`Copyright &copy; ${currentYear}  ${fullName}
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -135,7 +135,7 @@ limitations under the License.`;
             licenseNotice =
 `MIT License
 
-Copyright (c) ${currentYear} ${fullName}
+Copyright &copy; ${currentYear} ${fullName}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -214,16 +214,14 @@ For more information, please refer to <https://unlicense.org>`;
             
         };
 
-        fs.writeFile("README.md",
+        fs.writeFile("README-generated.md",
 `# ${response.title}
+
+${licenseBadge} [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)
 
 ## Description
 
-  ${response.description}
-
-<br/>
-
-${licenseBadge}
+${response.description}
 
 ---
 
@@ -271,7 +269,7 @@ ${licenseNotice}
 ## Questions
 
 If you have questions, contact me on [GitHub](https://github.com/${response.github}) or send me an e-mail at <${response.email}>.`,
-            (err) => err ? console.log(err) : console.log("- README.md created in the root directory -")
+            (err) => err ? console.log(err) : console.log("- README-generated.md created in the root directory -")
         );
     })
     .catch(err => console.log(err));
