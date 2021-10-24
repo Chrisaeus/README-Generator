@@ -61,8 +61,8 @@ inquirer
         
         const fullName = response.name;
         const currentYear = new Date().getFullYear();
-        const licenseBadge = "";
-        const licenseNotice = "";
+        let licenseBadge = "";
+        let licenseNotice = "";
         
         if (response.license == "GNU AGPLv3") {
 
@@ -257,4 +257,5 @@ ${licenseNotice}
 If you have questions, contact me on [GitHub](https://github.com/${response.github}) or send me an e-mail at <${response.email}>.`,
             (err) => err ? console.log(err) : console.log("- README.md created in the root directory -")
         );
-    });
+    })
+    .catch(err => console.log(err));
