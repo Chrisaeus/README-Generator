@@ -67,6 +67,11 @@ Any part of the README.md can be changed or deleted after generation. It is reco
 
 After the README is made, move it from the generated-files folder to the root folder of the corresponding application.
 
+<br/>
+
+#### README Example - click to open full video in browser
+
+[![README Example](<./assets/images/README Example.gif>)](https://watch.screencastify.com/v/N9nJG29zqvqgSxwXGYo6)
 
 ---
 
