@@ -213,8 +213,9 @@ OTHER DEALINGS IN THE SOFTWARE.
 For more information, please refer to <https://unlicense.org>`;
             
         };
-
-        fs.writeFile("README-generated.md",
+        
+        fs.mkdirSync("./generated-files", { recursive: true });
+        fs.writeFile("./generated-files/README.md",
 `# ${response.title}
 
 ${licenseBadge} [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)
@@ -269,7 +270,7 @@ ${licenseNotice}
 ## Questions
 
 If you have questions, contact me on [GitHub](https://github.com/${response.github}) or send me an e-mail at <${response.email}>.`,
-            (err) => err ? console.log(err) : console.log("- README-generated.md created in the root directory -")
+            (err) => err ? console.log(err) : console.log("- README.md written to root/generated-files/ -")
         );
     })
     .catch(err => console.log(err));
